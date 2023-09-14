@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BHARAT | Home</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="./js/app.js" defer></script>
   </head>
   <body>
@@ -12,28 +19,28 @@
     <div class="cursor-outline" data-cursor-outline></div>
     <main class="main_bg">
       <section class="hero_sec">
-        <nav class="nav_items">
-          <a href="./pages/mission-page.html">Our Mission</a>
-          <a href="./pages/countries.html">G20 Members</a>
-          <a href="./pages/donate-form.html">Explore Bharat</a>
-        </nav>
         <div class="hero_main">
           <div class="hero_text">
-            <span class="hero_span"
-              ><span class="hero_welcome">Welcome</span> to G20 Bharat
-              2023</span
-            >
+            <span class="hero_span">Welcome to G20 Bharat 2023</span>
             <h1 class="hero_main_text">Human Centric Approach</h1>
             <span class="hero_small_text"
-              >One Earth, One Family, One Future. Join the environmental
-              revolution !</span
+              >One Earth, One Family, One Future.</span
             >
             <br />
-            <button class="hero_btn_primary">Get Started</button>
-            <button class="hero_btn_secondary">About G20</button>
+            <div class="hero-btns">
+              <button class="hero_btn_primary">Get Started</button>
+              <button
+                class="hero_btn_secondary"
+                onclick="window.location.href='https://www.youtube.com/watch?v=3o7Orb-IcII'"
+              >
+                Watch Intro <i class="fa-solid fa-video"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </main>
   </body>
 </html>
+
+
