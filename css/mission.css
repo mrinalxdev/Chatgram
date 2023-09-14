@@ -55,6 +55,7 @@ body {
     border: 1px solid #16ff00;
     margin-top: 60px;
     padding: 20px;
+    cursor: pointer;
 }
 
 section {
