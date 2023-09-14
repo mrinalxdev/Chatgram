@@ -19,8 +19,8 @@ a{
     background: white;
 }
 .cursor-outline{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 2px solid white;
 }
 .cursor-dot, .cursor-outline {
@@ -44,7 +44,7 @@ a{
     
 }
 .hero_sec {
-    min-width: 60rem;
+    min-width: 66rem;
     min-height: 550px;
     background-color: rgba(22, 22, 21, 0.63);
     border-radius: 20px;
@@ -61,7 +61,7 @@ a{
     align-items: center;
 }
 .hero_main_text {
-    font-size: 4rem;
+    font-size: 3.1rem;
 }
 .hero-btns {
     display: flex;
@@ -73,16 +73,23 @@ a{
 .hero_btn_primary {
     background: #16FF00;
     color: black;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
     padding: 15px 30px;
     font-weight: 700;
     border-radius: 20px;
     transition: .2s ease;
     font-family: monospace;
+    cursor: none;
 }
 .hero_btn_primary:hover {
     border-radius: 40px 10px;
+}
+.for {
+    color: #16FF00;
+}
+.pad {
+    padding-left: 4px;
 }
 
 .hero_btn_secondary {
@@ -92,4 +99,5 @@ a{
     cursor: pointer;
     color: #16FF00;
     font-family: monospace;
+    font-size: 14px;
 }

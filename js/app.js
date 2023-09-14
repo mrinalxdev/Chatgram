@@ -16,3 +16,22 @@ window.addEventListener("mousemove", function (e) {
     { duration: 500, fill: "forwards" }
   );
 });
+
+window.addEventListener("scroll", reveal);
+
+function reveal () {
+  let reveal = document.querySelectorAll('.reveal');
+
+  for (let i = 0; i < reveal.length; i++) {
+    let windowHeight = window.innerHeight;
+    let revealTop = reveal[i].getBoundingClientRect().top;
+    let revealPoint = 150;
+
+    if(revealTop < windowHeight - revealPoint){
+      reveal[i].classList.add('active')
+    }else {
+      reveal[i].classList.remove('active')
+    }
+  }
+  
+}
