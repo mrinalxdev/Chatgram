@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow : hidden
+}
+
+.bg-image {
+  background-image: url("../assets/main-bg.png");
+}
