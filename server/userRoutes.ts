@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import jwt from "jsonwebtoken";
+const jwt = require("jsonwebtoken");
 import { User } from "./userModals";
 
 const router = Router();
@@ -23,6 +23,19 @@ router.get("/users", async (req: Request, res: Response) => {
   try {
     const users = await User.find({});
     res.send(users);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/user", async (req: Request, res: Response) => {
+  try {
+    const data = await jwt.verify(
+      req.headers.authorization!,
+      process.env.ACCESS_TOKEN_SECRET!
+    );
+    const user = await User.find({ email: data?.email });
+    res.send(user)
   } catch (err) {
     console.log(err);
   }
