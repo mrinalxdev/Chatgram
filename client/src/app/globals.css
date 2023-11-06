@@ -9,3 +9,6 @@ body {
 .bg-image {
   background-image: url("../assets/main-bg.png");
 }
+.selected-user {
+  @apply bg-slate-300
+}

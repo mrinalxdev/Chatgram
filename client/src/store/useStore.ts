@@ -1,4 +1,4 @@
-import { useState, userProps } from "@/types";
+import { selectedUserState, useState } from "@/types";
 import { create } from "zustand";
 
 
@@ -11,3 +11,8 @@ export const useAllUsers = create((set) => ({
   users: undefined,
   setUsers: (users: any) => set({ users: users }),
 }));
+
+export const useSelectedUser = create<selectedUserState>((set) => ({
+  selectedUser : undefined,
+  setSelectedUser : (user) => set({selectedUser : user})
+}))

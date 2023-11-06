@@ -17,8 +17,8 @@ export interface ChatListProps {
 }
 
 export interface selectedUserState {
-  myUser: undefined | any;
-  setUser: (user: any) => void;
+  selectedUser: undefined | any;
+  setSelectedUser: (user: any) => void;
 }
 
 export interface useState {
