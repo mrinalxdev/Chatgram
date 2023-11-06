@@ -1,3 +1,4 @@
+import { userProps } from "@/types";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 export async function handleSubmit(
@@ -37,4 +38,10 @@ export async function fetchUser(
   });
   const user = await response.json();
   setUser(user[0]);
+}
+
+export async function fetchUsers(mySelf: userProps, setUsers: any) {
+  const data = await fetch("/users");
+  const myUsers = await data.json();
+  setUsers(myUsers.filter((user: any) => user.email !== mySelf?.email));
 }
