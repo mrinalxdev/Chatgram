@@ -57,7 +57,7 @@ export function PhoneIcon() {
   );
 }
 
-// Left-Sidebar > SearchInp.tsx
+
 export function SearchIcon() {
   return (
     <svg
