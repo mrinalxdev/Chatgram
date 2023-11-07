@@ -3,6 +3,7 @@ import { userProps } from '@/types'
 import { FlashIcon } from '@/utils/icons'
 import Image from 'next/image'
 import React from 'react'
+import CallBtn from './CallBtn'
 
 const Topbar = ({seletedUser} : {seletedUser : userProps}) => {
     function handleClick () {
@@ -28,7 +29,7 @@ const Topbar = ({seletedUser} : {seletedUser : userProps}) => {
                 </div>
             </div>
 
-            
+            <CallBtn />
         </div>
     </div>
   )

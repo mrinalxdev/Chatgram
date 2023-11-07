@@ -1,9 +1,12 @@
-import React from 'react'
+import { PhoneIcon } from "@/utils/icons";
+import React from "react";
 
 const CallBtn = () => {
   return (
-    <div>CallBtn</div>
-  )
-}
+    <button>
+      <PhoneIcon />
+    </button>
+  );
+};
 
-export default CallBtn
+export default CallBtn;
