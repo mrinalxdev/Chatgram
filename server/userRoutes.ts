@@ -35,10 +35,22 @@ router.get("/user", async (req: Request, res: Response) => {
       process.env.ACCESS_TOKEN_SECRET!
     );
     const user = await User.find({ email: data?.email });
-    res.send(user)
+    res.send(user);
   } catch (err) {
     console.log(err);
   }
+});
+
+router.get("/messages", async (req: Request, res: Response) => {
+  const { sender, reciever } = req.query;
+  const user = await User.find({ email: reciever });
+  const filteredUser = user[0]?.messages?.filter(
+    (message: any) =>
+      (message.sender === sender && message.reciever === reciever) ||
+      (message.sender === reciever && message.reciever === sender)
+  );
+
+  res.send(filteredUser)
 });
 
 export default router;
